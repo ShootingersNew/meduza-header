@@ -24,7 +24,7 @@ export default defineConfig({
       exposes: {
         "./App": "./src/App.vue",
       },
-      shared: ["vue", "meduza-ui-kit"],
+      shared: ["vue"],
     }),
   ],
   resolve: {
