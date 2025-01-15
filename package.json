@@ -14,7 +14,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "meduza-pet-ui-kit": "^0.0.8",
+    "meduza-pet-ui-kit": "latest",
     "pinia": "^2.2.6",
     "vue": "^3.5.13"
   },
