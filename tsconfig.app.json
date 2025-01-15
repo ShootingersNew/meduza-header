@@ -6,9 +6,10 @@
     "target": "ES2022",
     "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "meduza-pet-ui-kit": ["node_modules/meduza-pet-ui-kit/dist/types"]
     }
   }
 }
