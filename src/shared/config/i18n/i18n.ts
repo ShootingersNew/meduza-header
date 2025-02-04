@@ -13,4 +13,5 @@ const i18n = createI18n({
   messages,
 });
 
+export type TMessages = keyof typeof messages;
 export default i18n;
