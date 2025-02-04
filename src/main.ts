@@ -1,11 +1,8 @@
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
-import App from './App.vue'
-import { createI18n } from 'vue-i18n'
+import i18n from './shared/config/i18n/i18n'
 
-const i18n = createI18n({
-  // something vue-i18n options here ...
-})
+import App from './App.vue'
 const app = createApp(App)
 app.use(i18n);
 app.use(createPinia())
