@@ -1,27 +1,29 @@
 <template>
-  <div>
-    <div @click="mit">CLICK ME</div>
-  </div>
+  <HeaderComponent @locale-changed="changeLocaleHandler" />
 </template>
 
 <script lang="ts">
 import 'meduza-pet-ui-kit/styles'
 import 'meduza-pet-ui-kit/variables'
 import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+import HeaderComponent from './widgets/Header/ui/HeaderComponent.vue'
+
 export default defineComponent({
   name: 'App',
-  components: {},
+  components: {
+    HeaderComponent,
+  },
   setup() {
-    const mit = () => {
-      console.log(window.eventBus)
+    const { t } = useI18n()
+    const changeLocaleHandler = (lang: { locale: string }) => {
       if (!window.eventBus) return
-      console.log('cringe')
       const emitter = window.eventBus
-      emitter.emit('localeChanged', { locale: 'mit' })
-      console.log('emit')
+      emitter.emit('localeChanged', lang)
     }
     return {
-      mit,
+      changeLocaleHandler,
+      t,
     }
   },
 })
