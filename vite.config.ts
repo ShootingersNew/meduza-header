@@ -12,7 +12,16 @@ export default defineConfig({
     port: 5005,
   },
   build: {
-    target: 'esnext'
+    target: 'esnext',
+    rollupOptions: {
+      output: {
+        globals: { vue: 'Vue' }
+      },
+      external: ['vue']
+    },
+  },
+  server: {
+    port: 5005,
   },
   plugins: [
     vue(),
@@ -23,6 +32,7 @@ export default defineConfig({
       filename: "meduzaHeader.js",
       exposes: {
         "./App": "./src/App.vue",
+        "./hooks/useSwitchHeaderLanguage": "./src/shared/config/i18n/useSwitchLanguage",
       },
       shared: ["vue"],
     }),
