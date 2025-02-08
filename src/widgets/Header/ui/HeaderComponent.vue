@@ -1,19 +1,22 @@
 <template>
   <div class="header">
-    <logo-component></logo-component>
-    <div class="header__nav">CRINGE CRINGE KEK LOL</div>
-    <div class="header__user">user</div>
+    <logo-component @locale-changed="(lang) => $emit('locale-changed', lang)"></logo-component>
+    <nav-bar-component></nav-bar-component>
+    <user-nav-component></user-nav-component>
   </div>
 </template>
 
 <script lang="ts">
 import LogoComponent from '@/features/LogoComponent/ui/LogoComponent.vue'
+import NavBarComponent from '@/features/NavBar/ui/NavBarComponent.vue'
+import UserNavComponent from '@/features/UserNav/ui/UserNavComponent.vue'
 import { defineComponent } from 'vue'
-
 export default defineComponent({
   name: 'HeaderComponent',
   components: {
     LogoComponent,
+    NavBarComponent,
+    UserNavComponent,
   },
   onMounted() {
     console.log('Header component mounted')

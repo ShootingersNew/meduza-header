@@ -1,5 +1,5 @@
-{
-  "navBar": {
+export default{
+  "NavBar": {
     "home": "Главная",
     "news": "Новости",
     "stories": "Истории",

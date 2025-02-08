@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <IconComponent :width="153" :height="33" :name="EIconNames.Logo" />
+    <IconComponent :width="137" :height="29" :name="EIconNames.Logo" />
     <div class="language text-default">
       <link-component
         :theme="ELinkTheme.Secondary"
@@ -48,12 +48,13 @@ export default defineComponent({
 
 .logo
   display flex
-  align-items flex-end
+  align-items flex-start
   gap 35px
   .language
     position relative
     bottom -1px
-    line-height 37px
+    font-size 18px
+    line-height 31px
     display flex
     align-items center
     margin-left 10px

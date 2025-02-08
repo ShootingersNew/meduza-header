@@ -32,7 +32,7 @@ export default defineConfig({
       filename: "meduzaHeader.js",
       exposes: {
         "./App": "./src/App.vue",
-        "./hooks/useSwitchHeaderLanguage": "./src/app/config/i18n/useSwitchLanguage",
+        "./hooks/useSwitchHeaderLanguage": "./src/shared/config/i18n/useSwitchLanguage",
       },
       shared: ["vue"],
     }),

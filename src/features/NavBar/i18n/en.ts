@@ -1,5 +1,5 @@
-{
-  "navBar": {
+export default {
+  "NavBar": {
     "home": "Home",
     "news": "News",
     "stories": "Stories",
