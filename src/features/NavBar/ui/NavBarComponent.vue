@@ -47,7 +47,7 @@ export default defineComponent({
 .nav-bar
   display flex
   align-items flex-end
-  gap 35px
+  gap 28px
   font-size 18px
   line-height 31px
 </style>

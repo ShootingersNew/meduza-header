@@ -7,7 +7,7 @@
       :name="EIconNames.Arrow"
     ></IconComponent>
     <div class="user-nav__profile">
-      <img class="user-nav__avatar" src="/avatar.jpg" alt="profile" />
+      <img class="user-nav__avatar" :src="avatarUrl" alt="profile" />
       <span class="user-nav__name">John Doe</span>
     </div>
   </div>
@@ -17,6 +17,7 @@
 import { IconComponent } from 'meduza-pet-ui-kit'
 import { EIconNames } from 'meduza-pet-ui-kit/enums'
 import { defineComponent } from 'vue'
+import avatarUrl from './avatar.jpg' // путь до картинки внутри src/assets
 
 export default defineComponent({
   name: 'logo-component',
@@ -26,6 +27,7 @@ export default defineComponent({
   setup() {
     return {
       EIconNames,
+      avatarUrl,
     }
   },
 })
