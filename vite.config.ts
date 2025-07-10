@@ -34,14 +34,17 @@ export default defineConfig({
         "./App": "./src/App.vue",
       },
       shared: ["vue", "vue-router", "pinia"],
-      remotes: {
+      remotes: process.env.NODE_ENV === 'test' ? {} : {
         'host': 'http://localhost:5000/assets/host.js',
       },
     }),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      ...(process.env.NODE_ENV === 'test' && {
+        'host': fileURLToPath(new URL('./src/__mocks__/host', import.meta.url))
+      })
     },
   },
 })
