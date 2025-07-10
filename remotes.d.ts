@@ -16,6 +16,7 @@ declare module "host/I18nService" {
     changeLocale: (locale: string) => void;
     isLocaleAvailable: (locale: string) => boolean;
     addLocale: (locale: string, translations: Record<string, object>) => void;
+    addLocales: (locales: Record<string, Record<string, object>>) => void;
     t: (ket: string, locale?: string) => string;
   };
   export default I18nService;

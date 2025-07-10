@@ -18,7 +18,7 @@ import { ELinkTheme } from 'meduza-pet-ui-kit/enums'
 import { defineComponent } from 'vue'
 import { NavBarLinks } from '../model'
 import { useI18n } from 'vue-i18n'
-import { useCustomRoute } from 'host/useCustomRoute'
+import useCustomRoute from 'host/useCustomRoute'
 import NavigationService from 'host/NavigationService'
 
 export default defineComponent({

@@ -17,8 +17,10 @@ export default defineComponent({
     HeaderComponent,
   },
   setup() {
-    I18nService.addLocale('en', en)
-    I18nService.addLocale('ru', ru)
+    I18nService.addLocales({
+      en,
+      ru,
+    })
     const changeLocaleHandler = (lang: { locale: string }) => {
       I18nService.changeLocale(lang.locale)
     }
