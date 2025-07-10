@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <logo-component @locale-changed="(lang) => $emit('locale-changed', lang)"></logo-component>
+    <logo-component @locale-changed="(lang: any) => $emit('locale-changed', lang)"></logo-component>
     <nav-bar-component></nav-bar-component>
     <user-nav-component></user-nav-component>
   </div>
@@ -17,9 +17,6 @@ export default defineComponent({
     LogoComponent,
     NavBarComponent,
     UserNavComponent,
-  },
-  onMounted() {
-    console.log('Header component mounted')
   },
 })
 </script>

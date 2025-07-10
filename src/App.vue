@@ -6,8 +6,10 @@
 import 'meduza-pet-ui-kit/styles'
 import 'meduza-pet-ui-kit/variables'
 import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
 import HeaderComponent from './widgets/Header/ui/HeaderComponent.vue'
+import I18nService from 'host/I18nService'
+import en from './shared/config/i18n/en'
+import ru from './shared/config/i18n/ru'
 
 export default defineComponent({
   name: 'App',
@@ -15,15 +17,13 @@ export default defineComponent({
     HeaderComponent,
   },
   setup() {
-    const { t } = useI18n()
+    I18nService.addLocale('en', en)
+    I18nService.addLocale('ru', ru)
     const changeLocaleHandler = (lang: { locale: string }) => {
-      if (!window.eventBus) return
-      const emitter = window.eventBus
-      emitter.emit('localeChanged', lang)
+      I18nService.changeLocale(lang.locale)
     }
     return {
       changeLocaleHandler,
-      t,
     }
   },
 })

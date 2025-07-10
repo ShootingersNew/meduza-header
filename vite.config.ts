@@ -17,7 +17,7 @@ export default defineConfig({
       output: {
         globals: { vue: 'Vue' }
       },
-      external: ['vue']
+      external: ['vue', 'vue-router', 'pinia'],
     },
   },
   server: {
@@ -32,9 +32,11 @@ export default defineConfig({
       filename: "meduzaHeader.js",
       exposes: {
         "./App": "./src/App.vue",
-        "./hooks/useSwitchHeaderLanguage": "./src/shared/config/i18n/useSwitchLanguage",
       },
-      shared: ["vue"],
+      shared: ["vue", "vue-router", "pinia"],
+      remotes: {
+        'host': 'http://localhost:5000/assets/host.js',
+      },
     }),
   ],
   resolve: {
