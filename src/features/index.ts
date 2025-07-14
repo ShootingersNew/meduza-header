@@ -1,4 +1,3 @@
-import Logo from "./LogoComponent/ui/LogoComponent.vue";
+import Logo from './LogoComponent/ui/LogoComponent.vue'
 
-export { Logo };
-
+export { Logo }

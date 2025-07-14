@@ -5,4 +5,4 @@ export default {
   isLocaleAvailable: (locale: string): boolean => true,
   addLocale: (locale: string, translations: Record<string, object>): void => {},
   t: (key: string, locale?: string): string => key,
-};
+}

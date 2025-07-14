@@ -11,7 +11,10 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "docker:build": "docker build -t tiahsilver/header .",
+    "docker:push": "docker push tiahsilver/header",
+    "docker": "docker run -it -p 5005:80 --rm --name header tiahsilver/header"
   },
   "dependencies": {
     "i18n": "^0.15.1",
@@ -42,7 +45,7 @@
     "prettier": "^3.3.3",
     "stylus": "^0.64.0",
     "stylus-loader": "^8.1.1",
-    "typescript": "~5.6.3",
+    "typescript": "^5.8.3",
     "vite": "^5.4.11",
     "vite-plugin-vue-devtools": "^7.6.5",
     "vitest": "^2.1.5",

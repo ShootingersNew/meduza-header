@@ -4,5 +4,5 @@ export function useI18n() {
     locale: 'en',
     availableLocales: ['en', 'ru'],
     setLocale: () => {},
-  };
+  }
 }

@@ -2,6 +2,7 @@
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["src/**/*", "src/**/*.vue"],
   "exclude": ["src/**/__tests__/*"],
+  "files": ["remotes.d.ts"],
   "compilerOptions": {
     "target": "ES2022",
     "composite": true,
@@ -12,6 +13,5 @@
       "@/*": ["./src/*"],
       "meduza-pet-ui-kit": ["node_modules/meduza-pet-ui-kit/dist/types"]
     }
-  },
-  "files": ["env.d.ts", "remotes.d.ts"]
+  }
 }

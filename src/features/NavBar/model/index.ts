@@ -1,4 +1,3 @@
-
 const NavBarLinks = {
   home: {
     title: 'NavBar.home',
@@ -20,8 +19,7 @@ const NavBarLinks = {
   },
   shop: {
     title: 'NavBar.shop',
-  }
+  },
 }
 
-export { NavBarLinks };
-
+export { NavBarLinks }

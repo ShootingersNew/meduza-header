@@ -1,4 +1,3 @@
-import HeaderComponent from './Header/ui/HeaderComponent.vue';
+import HeaderComponent from './Header/ui/HeaderComponent.vue'
 
-export { HeaderComponent };
-
+export { HeaderComponent }
