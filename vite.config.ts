@@ -41,7 +41,7 @@ export default defineConfig(({ mode }) => {
         remotes: isTest
           ? {}
           : {
-              host: `${env.VITE_HOST_REMOTE}/assets/host.js`,
+              host: `${env.VITE_HOST_REMOTE}/host-assets/host.js`,
             },
       }),
     ],
